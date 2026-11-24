@@ -48,3 +48,19 @@ body:has(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]) .pxl-entry-content>.elementor>.e-c
 .btn.btn-text-nina{border-radius:999px!important}
 .pxl-heading .pxl-title--highlight{background-image:linear-gradient(90deg,#9B8BFA,#7B5CF6)!important}
 .pxl-heading .pxl-item--title{font-weight:600}
+/* En-tête commun */
+.lam-sub #pxl-page-title-elementor{display:none}
+.lam-hero{margin:40px 15px 0;border-radius:25px;background:radial-gradient(circle at 88% 10%,rgba(123,92,246,.45),transparent 45%),linear-gradient(135deg,#0A0A14,#1a0a35);color:rgba(255,255,255,.8)}
+.lam-hero-in{padding:150px 48px 64px}.lam-hero h1{color:#fff;font:600 clamp(2.4rem,5vw,3.6rem)/1.1 Manrope,sans-serif;margin:0 0 12px}.lam-hero p{margin:0;font-size:1.15rem}
+.lam-sub :is(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae])>[class$="-hero"]{padding-top:160px!important;border-radius:25px!important}
+@media(max-width:1199px){.lam-hero{margin-top:16px}.lam-hero-in{padding:56px 24px}.lam-sub :is(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae])>[class$="-hero"]{padding-top:56px!important}}
+.lam-hero{margin-top:0;border-top:40px solid transparent;background-clip:padding-box;border-radius:65px 65px 25px 25px / 65px 65px 25px 25px}
+@media(min-width:1200px){
+.lam-sub:has(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]) .pxl-entry-content>.elementor{margin-top:-120px}
+}
+@media(max-width:1199px){.lam-hero{border-top-width:16px}}
+.lam-hero{border-radius:25px / 65px 65px 25px 25px}
+.lam-sub :is(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]){margin-inline:5px}
+@media(max-width:1199px){.lam-hero{border-radius:25px / 41px 41px 25px 25px}}
+
+@media(max-width:767px){.lam-sub.elementor-page-269 .pxl-entry-content .elementor-element,.lam-sub.elementor-page-269 .pxl-entry-content .e-con-inner{max-width:100%!important;min-width:0!important;box-sizing:border-box}.lam-sub.elementor-page-269 .pxl-entry-content .e-con{margin-left:0!important;margin-right:0!important;padding-left:8px!important;padding-right:8px!important;left:auto!important}.lam-sub.elementor-page-269 .pxl-entry-content .pxl-item--title{white-space:normal}}
