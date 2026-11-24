@@ -471,7 +471,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <div class="lcoa-arch-wrap">
       <div style="display:block;padding:40px;background:rgba(123,92,246,.06);border-radius:10px;font-size:.95rem;color:var(--txm);">
         <strong style="color:var(--tx)">Schéma d'architecture CoA-Text2OWL</strong><br>
-        Input PDF → Chunks 120 mots → Worker Agents (CU1…CUn) → Manager Agent → Ontology Serialization → Fichier .ttl
+        Input PDF → Chunks → Worker Agents (CU1…CUn) → Manager Agent → Ontology Serialization → Fichier .ttl
       </div>
       <p class="lcoa-arch-caption">Fig. 1 — Framework CoA-Text2OWL : du document PDF à l'ontologie OWL sérialisée en Turtle</p>
     </div>
@@ -479,7 +479,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       <div class="lcoa-module">
         <div class="lcoa-module-num">1</div>
         <h3>Input Processing Module</h3>
-        <p>Extraction du texte via PyMuPDF et segmentation en chunks de ~150 mots, préservant la cohérence sémantique tout en optimisant le traitement parallèle par les agents.</p>
+        <p>Extraction du texte via PyMuPDF et segmentation en chunks, préservant la cohérence sémantique tout en optimisant le traitement parallèle par les agents.</p>
       </div>
       <div class="lcoa-module">
         <div class="lcoa-module-num">2</div>
@@ -516,14 +516,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <p class="lcoa-lead lcoa-lead--dk">Évaluation sur le dataset Pizza Ontology, comparaison contre le baseline Text2OWL mono-LLM (Mistral-7B). Métriques : conciseness, completeness, correctness (F1-score).</p>
     <div class="lcoa-highlights">
       <div class="lcoa-hl">
-        <div class="lcoa-hl-val">100%</div>
+        <div class="lcoa-hl-val">1,00</div>
         <h4>Propriétés d'objet</h4>
-        <p>CoA-Text2OWL extrait la totalité des propriétés relationnelles — le baseline n'en extrait aucune.</p>
+        <p>Concision de 1,00 et complétude de 0,25 : deux propriétés sur huit sont extraites, contre aucune pour la méthode de référence.</p>
       </div>
       <div class="lcoa-hl">
-        <div class="lcoa-hl-val">+43%</div>
+        <div class="lcoa-hl-val">0,43</div>
         <h4>Correctness classes</h4>
-        <p>Score F1 de 0.43 contre 0.41 pour le baseline — meilleure précision et couverture combinées.</p>
+        <p>Score F1 de 0,43 contre 0,41 pour la méthode de référence.</p>
       </div>
       <div class="lcoa-hl">
         <div class="lcoa-hl-val">0.935</div>
@@ -613,13 +613,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <p class="lcoa-lead lcoa-lead--dk">CoA-Text2OWL a été appliqué à des corpus hétérogènes réels issus du projet ANR TRACES, portant sur les systèmes de transport urbain et les politiques de mobilité à Genève.</p>
     <div class="lcoa-traces">
       <div class="lcoa-trace-card">
-        <span class="lcoa-trace-icon">🚋</span>
+        <span class="lcoa-trace-icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v13H6zM6 11h12M9 21l2-4M15 21l-2-4"/></svg></span>
         <h3>Réseau de tramway de Genève</h3>
         <p>Corpus de pages Wikipédia et descriptions institutionnelles sur les lignes 13, 14, 15, 17, 18 — infrastructure, véhicules, nœuds spatiaux et extensions récentes.</p>
         <span class="lcoa-trace-score">BERTScore : 0.935 · ROUGE-1 : 0.365</span>
       </div>
       <div class="lcoa-trace-card">
-        <span class="lcoa-trace-icon">🏛️</span>
+        <span class="lcoa-trace-icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-5 9 5zM5 9v10M10 9v10M14 9v10M19 9v10M3 20h18"/></svg></span>
         <h3>Politiques de mobilité urbaine</h3>
         <p>Textes législatifs, stratégiques et de planification couvrant la mobilité locale, les mesures de durabilité et les cadres de gouvernance des transports genevois.</p>
         <span class="lcoa-trace-score">BERTScore : 0.926 · ROUGE-1 : 0.392</span>
