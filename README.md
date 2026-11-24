@@ -21,8 +21,5 @@ Il a été généré à partir de l'ancien site WordPress (thème Auregon et Ele
 
 ## Mise à jour
 
-Les fichiers sont générés : il ne faut pas les modifier à la main. Une modification manuelle serait écrasée à la génération suivante.
+Le WordPress d'origine a été supprimé (novembre 2026) : les fichiers HTML se modifient désormais directement.
 
-1. Modifier le contenu dans le WordPress local (Docker).
-2. Régénérer le site avec les scripts `build.py` puis `optimize.py`.
-3. Publier avec `deploy.sh`.
