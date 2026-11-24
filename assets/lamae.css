@@ -64,3 +64,9 @@ body:has(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]) .pxl-entry-content>.elementor>.e-c
 @media(max-width:1199px){.lam-hero{border-radius:25px / 41px 41px 25px 25px}}
 
 @media(max-width:767px){.lam-sub.elementor-page-269 .pxl-entry-content .elementor-element,.lam-sub.elementor-page-269 .pxl-entry-content .e-con-inner{max-width:100%!important;min-width:0!important;box-sizing:border-box}.lam-sub.elementor-page-269 .pxl-entry-content .e-con{margin-left:0!important;margin-right:0!important;padding-left:8px!important;padding-right:8px!important;left:auto!important}.lam-sub.elementor-page-269 .pxl-entry-content .pxl-item--title{white-space:normal}}
+/* Grands écrans : cadre, logo et menu partagent la largeur de l’accueil (1840 px) */
+.lam-hero{width:calc(100% - 30px);max-width:1840px;margin-inline:auto}
+.lam-sub:has(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]) :is(.pxl-entry-content,.pxl-entry-content>.elementor,.elementor-container){max-width:none!important}
+.lam-sub .e-con:has(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]){--container-max-width:1850px;--content-width:1850px;max-width:none}
+.lam-sub .e-con>.e-con-inner:has(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]){max-width:1850px!important}
+@media(min-width:1200px) and (max-width:1399px){#pxl-header-elementor .elementor-4399 .elementor-element-e63495d>.elementor-widget-container{padding-left:16px!important}}
