@@ -1,0 +1,42 @@
+/* Ajustements de design LAMAE, chargés après le thème */
+h1,h2,h3,h4,h5,h6,.pxl-item--title,.pxl-page-title,.breadcrumb-entry,.pxl-heading .pxl-item--title,[class*="breadcrumb"] *{text-transform:none!important}
+h1,h2,h3{text-wrap:balance}
+a:focus-visible,button:focus-visible{outline:3px solid #7B5CF6!important;outline-offset:3px}
+/* Blocs des pages : police du site, contraste et tailles lisibles */
+:is(.lsvc,.lcoa,.ltcn,.lmm,.lns,[data-lamae]){font-family:"DM Sans",system-ui,sans-serif!important;--muted:rgba(255,255,255,.8)!important;display:flex;flex-direction:column;gap:18px}
+:is(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae])>[class$="-div"]{display:none}
+:is(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]) :is(h1,h2,h3,h4){font-family:Manrope,system-ui,sans-serif!important;font-weight:600!important;letter-spacing:-.015em}
+:is(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]) :is(p,li){font-size:max(1rem,16px)}
+:is(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]) :is([class$="-lead"],[class$="-hero-sub"],[class*="-lead "]){font-size:1.15rem}
+:is(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]) :is([class*="-tag"],[class*="-badge"]){font-size:.8rem!important;letter-spacing:.02em!important;text-transform:none!important}
+/* La bannière répète le titre quand la page a son propre en-tête */
+body:has(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]) #pxl-page-title-elementor{display:none}
+
+/* Icônes */
+.li{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;display:inline-block;vertical-align:-.12em}
+.lsvc-value-icon,.lsvc-aud-icon{color:#7B5CF6;font-size:2rem}.lsvc-value-icon{color:#b3a6ff}
+.lsvc-card-top-icon{color:#fff}.lsvc-offer-side span{color:#fff}
+/* Services */
+.lsvc-card-top{background:linear-gradient(135deg,#7B5CF6,#5046C8)!important}
+.lsvc-card{display:flex;flex-direction:column}.lsvc-card-body{flex:1;display:flex;flex-direction:column}.lsvc-card-body>p:last-child{margin:auto 0 0;padding-top:16px;font-weight:600}
+.lsvc-values{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))!important}
+.lsvc-value{text-align:left}
+.lsvc-audiences{display:flex!important;flex-wrap:wrap}.lsvc-aud{flex:1 1 280px}
+.lsvc-offer-side i{display:none}.lsvc-offer-side span{font-size:1.7rem}
+.lsvc-hero-stats{margin-top:36px!important}
+.lsvc-btn--ghost{color:#fff!important}
+@media(min-width:1000px){.lsvc-hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:center}}
+.lsvc-fig{position:relative;z-index:1;margin:0;color:#fff}.lsvc-fig svg{width:100%;height:auto;display:block;max-width:520px;margin:auto}
+@media(max-width:999px){.lsvc-fig{margin-top:40px}}
+@media(max-width:480px){.lsvc-hero,.lsvc-sec{padding:44px 20px!important}}
+/* Accueil */
+.pxl-tabs .pxl-item--content pre{font:600 1.25rem/1.35 Manrope,system-ui,sans-serif;background:none;border:0;padding:0;margin:0 0 10px;color:#fff;white-space:normal}
+:is(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]) [class*="-sec--light"]{--muted:#4a4a68}
+.lsvc-aud{flex:1 1 30%;min-width:min(100%,260px)}
+.lsvc :is(.lsvc-value,.lsvc-aud,.lsvc-step,.lsvc-offer,.lsvc-card-body) :is(p,li){font-size:1rem!important}
+.lsvc .lsvc-value{text-align:left!important}
+[data-lamae] :is([class*="-hero"],[class*="-sec--dark"],[class*="-sec--grad"]) p:is([class*="lead"],[class*="sub"]){color:rgba(255,255,255,.8)!important}
+[class*="-sec--light"] [class*="-stat"] :is(span,strong,small,div):not([class*="num"]),.lcoa [class*="-sec--light"] [class*="metric"] :is(strong,span,h4,div):not([class*="num"]):not([class*="val"]){color:#3a3a5a}
+body:has(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]) .pxl-entry-content>.elementor{margin-top:-60px}
+body:has(.lsvc,.lcoa,.ltcn,.lmm,[data-lamae]) .pxl-entry-content>.elementor>.e-con{padding-top:0!important}
+.lcoa [class*="-sec--light"] .lcoa-hl h4{color:#1a1a2e!important}

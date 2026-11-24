@@ -93,6 +93,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel="icon" href="../wp-content/uploads/2026/02/cropped-carre-vs2-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../wp-content/uploads/2026/02/cropped-carre-vs2-180x180.png" />
 <meta name="msapplication-TileImage" content="../wp-content/uploads/2026/02/cropped-carre-vs2-270x270.png" />
+<link rel="stylesheet" href="../assets/lamae.css">
 </head>
 <body class="wp-singular page-template-default page page-id-10558 wp-theme-auregon theme-auregon woocommerce-no-js   pxl-redux-page  body-default-font   heading-default-font   woocommerce-layout-grid pxl-shape-body-show elementor-default elementor-kit-8 elementor-page elementor-page-10558">
         <div id="pxl-wapper" class="pxl-wapper">
@@ -196,18 +197,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         		<div data-elementor-type="wp-page" data-elementor-id="10558" class="elementor elementor-10558">
 				<div class="elementor-element elementor-element-4658135 e-flex e-con-boxed pxl-row-scroll-none pxl-column-none pxl-full-content-with-space-none pxl-shadow-blur-no e-con e-parent " data-id="4658135" data-element_type="container" data-e-type="container">			<div class="e-con-inner">
 				<div class="elementor-element elementor-element-67e15ba elementor-widget elementor-widget-shortcode" data-id="67e15ba" data-element_type="widget" data-e-type="widget" data-widget_type="shortcode.default">
-							<div class="elementor-shortcode"><?php
-add_action( 'wp_enqueue_scripts', 'lamae_nsai_enqueue' );
-function lamae_nsai_enqueue() {
-    wp_enqueue_style(
-        'lamae-nsai-fonts',
-        'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap',
-        [], null
-    );
-}
-add_shortcode( 'lamae_nsai', 'lamae_nsai_render' );
-function lamae_nsai_render() {
-    ob_start(); ?>
+							<div class="elementor-shortcode">
 <style>
 /* ─── Reset & Base ─── */
 .lm { font-family:'Plus Jakarta Sans',system-ui,sans-serif; color:#fff; line-height:1.65; }
@@ -481,7 +471,7 @@ function lamae_nsai_render() {
   .lm-pub{flex-direction:column;align-items:flex-start;}
 }
 </style>
-<div class="lm">
+<div class="lm" data-lamae>
   <div class="lm-hero">
     <div class="lm-hero-inner">
       <div class="lm-hero-badge">Projet de recherche · ICB UMR 6303 CNRS</div>

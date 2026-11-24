@@ -92,6 +92,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel="icon" href="../wp-content/uploads/2026/02/cropped-carre-vs2-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="../wp-content/uploads/2026/02/cropped-carre-vs2-180x180.png" />
 <meta name="msapplication-TileImage" content="../wp-content/uploads/2026/02/cropped-carre-vs2-270x270.png" />
+<link rel="stylesheet" href="../assets/lamae.css">
 </head>
 <body class="wp-singular page-template-default page page-id-10641 wp-theme-auregon theme-auregon woocommerce-no-js   pxl-redux-page  body-default-font   heading-default-font   woocommerce-layout-grid pxl-shape-body-show elementor-default elementor-kit-8 elementor-page elementor-page-10641">
         <div id="pxl-wapper" class="pxl-wapper">
@@ -195,27 +196,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         		<div data-elementor-type="wp-page" data-elementor-id="10641" class="elementor elementor-10641">
 				<div class="elementor-element elementor-element-c51e94a e-flex e-con-boxed pxl-row-scroll-none pxl-column-none pxl-full-content-with-space-none pxl-shadow-blur-no e-con e-parent " data-id="c51e94a" data-element_type="container" data-e-type="container">			<div class="e-con-inner">
 				<div class="elementor-element elementor-element-31fe2e5 elementor-widget elementor-widget-shortcode" data-id="31fe2e5" data-element_type="widget" data-e-type="widget" data-widget_type="shortcode.default">
-							<div class="elementor-shortcode"><?php
-/**
- * Shortcode LAMAE – Page Services
- * Usage : [lamae_services]
- *
- * Installation :
- *   Option A – Coller à la fin de votre functions.php
- *   Option B – Créer /wp-content/plugins/lamae-services/lamae-services.php
- *              Plugin Name: LAMAE Services
- */
-add_action( 'wp_enqueue_scripts', 'lamae_svc_enqueue' );
-function lamae_svc_enqueue() {
-    wp_enqueue_style(
-        'lamae-svc-fonts',
-        'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap',
-        [], null
-    );
-}
-add_shortcode( 'lamae_services', 'lamae_svc_render' );
-function lamae_svc_render() {
-    ob_start(); ?>
+							<div class="elementor-shortcode">
 <style>
 /* ── Base ── */
 .lsvc{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#fff;line-height:1.65;}
@@ -348,10 +329,10 @@ function lamae_svc_render() {
 }
 </style>
 <div class="lsvc">
-  <div class="lsvc-hero"><div class="lsvc-hero-inner"><div class="lsvc-badge">Prestation</div><h1>Agents sur <span>vos documents</span></h1><p class="lsvc-hero-sub">Transformez vos procédures, normes et rapports en connaissances interrogeables par un agent IA.</p><div class="lsvc-hero-cta"><a href="../contact/index.html" class="lsvc-btn">Parlons de vos documents</a><a href="../nos-services/index.html#services" class="lsvc-btn lsvc-btn--ghost">Toutes les prestations</a></div><div class="lsvc-hero-stats"><div class="lsvc-stat"><strong>ICB</strong><span>UMR 6303 CNRS</span></div><div class="lsvc-stat"><strong>DAVI</strong><span>Partenaire industriel</span></div><div class="lsvc-stat"><strong>ANR</strong><span>LabCom 2024-2029</span></div></div></div></div><div class="lsvc-div"></div>
-<div class="lsvc-sec lsvc-sec--light"><div class="lsvc-tag lsvc-tag--dk">Vos besoins</div><h2 class="lsvc-h2 lsvc-h2--dk">Les situations que <span>nous traitons</span></h2><p class="lsvc-lead lsvc-lead--dk">Trois difficultés fréquentes.</p><div class="lsvc-audiences"><div class="lsvc-aud"><span class="lsvc-aud-icon">🗂️</span><h4>Le savoir est dispersé</h4><p>Les équipes cherchent dans des PDF, des archives et des messageries.</p></div>
-<div class="lsvc-aud"><span class="lsvc-aud-icon">❓</span><h4>Les réponses sont incertaines</h4><p>Un assistant généraliste répond sans source, ou invente.</p></div>
-<div class="lsvc-aud"><span class="lsvc-aud-icon">👥</span><h4>L’expertise s’en va</h4><p>Les départs emportent des connaissances jamais formalisées.</p></div>
+  <div class="lsvc-hero"><div class="lsvc-hero-inner"><div class="lsvc-badge">Prestation</div><h1>Agents sur <span>vos documents</span></h1><p class="lsvc-hero-sub">Transformez vos procédures, normes et rapports en connaissances interrogeables par un agent IA.</p><div class="lsvc-hero-cta"><a href="../contact/index.html" class="lsvc-btn">Parlons de vos documents</a><a href="../nos-services/index.html#services" class="lsvc-btn lsvc-btn--ghost">Toutes les prestations</a></div><div class="lsvc-hero-stats"><div class="lsvc-stat"><strong>ICB</strong><span>UMR 6303 CNRS</span></div><div class="lsvc-stat"><strong>DAVI</strong><span>Partenaire industriel</span></div><div class="lsvc-stat"><strong>ANR</strong><span>LabCom 2024-2029</span></div></div></div><figure class="lsvc-fig"><svg viewBox="0 0 500 380" role="img" aria-label="Vos documents sont structurés par une chaîne d'agents, puis validés par vos experts."><g fill="none" stroke="#9B8BFA" stroke-width="2"><path d="M130 75C180 75 170 150 205 170M130 190H200M130 305C180 305 170 230 205 210M300 190H360"/></g><g fill="#1A1A35" stroke="#7B5CF6"><rect x="10" y="45" width="120" height="60" rx="12"/><rect x="10" y="160" width="120" height="60" rx="12"/><rect x="10" y="275" width="120" height="60" rx="12"/><rect x="360" y="145" width="130" height="90" rx="14"/></g><circle cx="250" cy="190" r="56" fill="#7B5CF6"/><g fill="#fff" font-family="DM Sans,sans-serif" font-size="16" text-anchor="middle"><text x="70" y="81">Procédures</text><text x="70" y="196">Normes</text><text x="70" y="311">Rapports</text><text x="250" y="186" font-weight="700">Agents</text><text x="250" y="206" font-weight="700">IA</text><text x="425" y="184">Validation par</text><text x="425" y="206">vos experts</text></g></svg></figure></div><div class="lsvc-div"></div>
+<div class="lsvc-sec lsvc-sec--light"><div class="lsvc-tag lsvc-tag--dk">Vos besoins</div><h2 class="lsvc-h2 lsvc-h2--dk">Les situations que <span>nous traitons</span></h2><p class="lsvc-lead lsvc-lead--dk">Trois difficultés fréquentes.</p><div class="lsvc-audiences"><div class="lsvc-aud"><span class="lsvc-aud-icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h7l2 2h9v11H3z"/></svg></span><h4>Le savoir est dispersé</h4><p>Les équipes cherchent dans des PDF, des archives et des messageries.</p></div>
+<div class="lsvc-aud"><span class="lsvc-aud-icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM9.500 9.500a2.500 2.500 0 1 1 3.500 2.300c-1 .5-1 1-1 1.700M12 17h.01"/></svg></span><h4>Les réponses sont incertaines</h4><p>Un assistant généraliste répond sans source, ou invente.</p></div>
+<div class="lsvc-aud"><span class="lsvc-aud-icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM3 20c0-8 12-8 12 0M16 6a3 3 0 0 1 0 5M18 14c2 1 3 3 3 6"/></svg></span><h4>L’expertise s’en va</h4><p>Les départs emportent des connaissances jamais formalisées.</p></div>
 </div></div>
 <div class="lsvc-div"></div>
 <div class="lsvc-sec lsvc-sec--grad"><div class="lsvc-tag">Méthode</div><h2 class="lsvc-h2">Comment nous <span>procédons</span></h2><p class="lsvc-lead">Un périmètre réduit d’abord, pour juger sur résultats.</p><div class="lsvc-steps"><div class="lsvc-step"><div class="lsvc-step-num">01</div><h4>Choisir</h4><p>Des documents représentatifs et des questions réelles de vos équipes.</p></div>
@@ -360,20 +341,20 @@ function lamae_svc_render() {
 <div class="lsvc-step"><div class="lsvc-step-num">04</div><h4>Mesurer</h4><p>Évaluation sur vos questions : exactitude, sources, erreurs restantes.</p></div>
 </div></div>
 <div class="lsvc-div"></div>
-<div class="lsvc-sec lsvc-sec--dark"><div class="lsvc-tag">Livrables</div><h2 class="lsvc-h2">Ce que <span>vous obtenez</span></h2><p class="lsvc-lead">Nous nous appuyons sur <a href="../chaine-of-agents-du-texte-a-la-connaissance/index.html" style="color:#a78bfa">CoA-Text2OWL</a>, présenté à KES 2025.</p><div class="lsvc-values"><div class="lsvc-value"><span class="lsvc-value-icon">📚</span><h3>Base de connaissances</h3><p>Structurée dans un format ouvert (OWL, Turtle).</p></div>
-<div class="lsvc-value"><span class="lsvc-value-icon">💬</span><h3>Démonstrateur</h3><p>Testé par vos utilisateurs.</p></div>
-<div class="lsvc-value"><span class="lsvc-value-icon">📊</span><h3>Rapport</h3><p>Évaluation et recommandation pour la suite.</p></div>
-<div class="lsvc-value"><span class="lsvc-value-icon">🎓</span><h3>Formation</h3><p>En option, pour vos équipes.</p></div>
+<div class="lsvc-sec lsvc-sec--dark"><div class="lsvc-tag">Livrables</div><h2 class="lsvc-h2">Ce que <span>vous obtenez</span></h2><p class="lsvc-lead">Nous nous appuyons sur <a href="../chaine-of-agents-du-texte-a-la-connaissance/index.html" style="color:#a78bfa">CoA-Text2OWL</a>, présenté à KES 2025.</p><div class="lsvc-values"><div class="lsvc-value"><span class="lsvc-value-icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v15H4zM10 5h5v15h-5zM15 6l4-1 2 14-4 1z"/></svg></span><h3>Base de connaissances</h3><p>Structurée dans un format ouvert (OWL, Turtle).</p></div>
+<div class="lsvc-value"><span class="lsvc-value-icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H10l-4 4v-4H4z"/></svg></span><h3>Démonstrateur</h3><p>Testé par vos utilisateurs.</p></div>
+<div class="lsvc-value"><span class="lsvc-value-icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M7 20v-6M12 20V6M17 20v-9"/></svg></span><h3>Rapport</h3><p>Évaluation et recommandation pour la suite.</p></div>
+<div class="lsvc-value"><span class="lsvc-value-icon"><svg class="li" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5zM6 11v5c3 3 9 3 12 0M22 9v6"/></svg></span><h3>Formation</h3><p>En option, pour vos équipes.</p></div>
 </div></div>
 <div class="lsvc-div"></div>
 <div class="lsvc-cta" id="contact">
     <div class="lsvc-cta-inner">
       <div class="lsvc-tag" style="margin-bottom:20px;">Travaillons ensemble</div>
-      <h2>Prêt à transformer votre organisation<br>avec <span>l'IA de demain</span> ?</h2>
-      <p>Quelle que soit l'étape de votre projet — exploration, développement ou déploiement — nos équipes sont disponibles pour analyser votre situation et vous proposer un accompagnement adapté.</p>
+      <h2>Parlons de <span>votre projet</span></h2>
+      <p>Décrivez en quelques lignes votre métier, vos données et ce que vous voulez améliorer.</p>
       <div class="lsvc-cta-btns">
         <a href="mailto:contact@lamae.net" class="lsvc-btn">Contactez-nous</a>
-        <a href="../index.html" target="_blank" class="lsvc-btn lsvc-btn--ghost">Visiter le site LAMAE</a>
+        <a href="../index.html" class="lsvc-btn lsvc-btn--ghost">Retour à l’accueil</a>
       </div>
     </div>
   </div>
